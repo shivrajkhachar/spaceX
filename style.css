@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Familjen Grotesk', sans-serif;
+    background-color: black;
+    color: #FFFFFF;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+}
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    height: 100px;
+    padding:  0 30px;
+}
+.logo{
+    width: 25%;
+    height: auto;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
+.nav-manu{
+    margin-right: 50px;
+}
+.nav-manu ul{
+    list-style: none;
+    display: flex;
+}
+.nav-manu ul li{
+    position: relative;
+    margin-right: 20px;
+    padding-bottom: 2px;
+}
+.nav-manu ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav-manu ul li a::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #FFFFFF;
+    transform: scale(0);
+    transition: 0.6s ease-in-out;
+}
+.nav-manu ul li a:hover::after{
+    transform: scale(1);
+}
+
+/*    banner-section   */
+section {
+    position: relative;
+    height: 100vh;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
+}
+
+.banner{
+    position: relative;
+    background-image: url('img/spacex-Ptd-iTdrCJM-unsplash.jpg');
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+section .banner-main{
+    position: absolute;
+    bottom: 200px;
+    left: 150px;
+    max-width: 560px;
+}
+.banner-main h4{
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    animation: fadeInUp 0.5s  ease-in-out;
+}
+.banner-main h2{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.5s  ease-in-out 0.2s;
+    animation-fill-mode: both;
+}
+.banner-main a{
+    animation: fadeInUp 0.5s  ease-in-out;
+    animation-fill-mode: both;
+
+}
+
+.btn-banner{
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 30px;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 2;
+    
+}
+.btn-banner:hover span{
+    color: #000;
+
+}
+.btn-banner .hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: tarnsform 0.6s cubic-bezier(0.19,1,0.22,1);
+}
+.btn-banner:hover .hover{
+    transform: translateY(0);
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeBounce 5s infinite;
+}
+.scroll-down i{
+    font-size: 24px;
+}
+
+/*    banner-section-2   */
+.banner-2{
+    background-image: url('img/section-d.webp');
+    
+}
+/*    banner-section-3   */
+.banner-3{
+    background-image: url('img/fight2.jpg');
+    
+}
+.banner-4{
+    background-image: url('img/section-e.webp');
+    
+}
+.banner-5{
+    background-image: url('img/banner-5.jpg');
+    
+}
+.banner-6{
+    background-image: url('img/section-f.webp');
+    
+}
+
+
+/*    footer   */
+
+footer{
+    position: relative;
+    padding: 55px 0;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+footer ul li{
+    margin-right: 30px;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 2.5;
+}
+footer ul li a{
+    color: #fff;
+    transition: color 0.6s;
+}
+footer ul li a:hover {
+    color: #aaa;
+}
+
+/*    togal-bar   */
+.togal-bar{
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+}
+.togal-top,
+.togal-middle,
+.togal-bottom {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: all 0.5s;
+}
+.togal-middle{
+    transform: translateY(5px);
+}
+.togal-bottom{
+    transform: translateY(10px);
+    
+}
+.open{
+    transform: rotate(90deg);
+}
+.open .togal-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px); 
+}
+.open .togal-middle{
+    display: none;
+}
+.open .togal-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px); 
+
+}
+/*     overlay    */
+.overlay-show{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,  0, 0.5 );
+    z-index: 3;
+}
+.stop-scrolling{
+    overflow: hidden;
+}
+
+/*    hide menu   */
+.mobile-only{
+    display: none;
+}
+.mobile-main-menu{
+    position: fixed;
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    background-color: #000;
+    width: 350px;
+    height: 100%;
+    z-index: 4;
+    padding-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    overflow: scroll;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.show-menu{
+    transform: translateX(0);
+}
+.mobile-main-menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 50px;
+    width: 100%;
+    list-style: none;
+}
+.mobile-main-menu ul li{
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-bottom: 1px #555 dotted;
+    width: 100%;
+    text-align: right;
+    padding-bottom: 8px;
+}
+.mobile-main-menu ul li a{
+    color: #FFFFFF;
+    transition: 0.6s;
+    text-decoration: none;
+}
+.mobile-main-menu ul li a:hover{
+    color: #aaa;
+}
+
+
+/*   bg-img falcon9 */
+.bg-falcon-9{
+    background-image: url('img/falcon-9.webp');
+}
+.bg-falcon-heavy{
+    background-image: url('img/spacex-starship-1600-x-900-62b251ad6xo0mc29.jpg');
+}
+.bg-falcon-dargon{
+    background-image: url('img/dragon.webp');
+}
+.section-animate{
+    animation: fadeIn 2s ease-in-out;
+}
+.section-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;
+}
+.section-text h3{
+    font-size: 80px;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-text {
+    font-size: 20px;
+    /* animation: fadeInUp 0.5s ease-in-out 0.2s; */
+    animation-fill-mode: both;
+}
+
+/*   time   */
+.stats{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    text-transform: uppercase;
+}
+.stats div span{
+    font-size: 100px;
+}
+.stats div h4{
+    font-size: 24px;
+    font-weight: 300;
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(140px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeBounce{
+    0%,
+    20%,
+    50%,
+    80%,
+    100%
+    {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    40%{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}

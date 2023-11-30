@@ -1,0 +1,144 @@
+@media(max-width:1240px){
+    section .banner-main {
+        position: absolute;
+        bottom: 72px;
+    }
+}
+@media(max-width:1024px){
+    
+    section .banner-main {
+        position: absolute;
+        bottom: 88px;
+    }
+    .nav-manu ul li {
+        position: relative;
+        margin-right: 15px;
+        padding-bottom: 2px;
+    }
+}
+@media(max-width:991px) {
+    .nav-manu{
+        display: none;
+    }
+    .logo{
+        width: 30%;
+    }
+    section .banner-main{
+        bottom: 13px;
+        left: 50px;
+        max-width: 560px;
+    }
+    .banner-main h2 {
+        font-size: 40px;
+    }
+    .mobile-only{
+        display: block;
+    }
+    .section-text h3 {
+        font-size: 70px;
+        margin-bottom: 45px;
+    }
+    .stats div span {
+        font-size: 90px;
+    }
+    .stats div h4 {
+        font-size: 20px;
+    }
+    .mobile-main-menu ul li {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+}
+@media(max-width:768px){
+    .section-text h3 {
+        font-size: 60px;
+        margin-bottom: 45px;
+    }
+    .section-text p{
+        font-size: 14px;
+    }
+    .stats div span {
+        font-size: 85px;
+    }
+    .stats div h4 {
+        font-size: 18px;
+    }
+    .mobile-main-menu ul li {
+        margin-bottom: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-bottom: 1px #555 dotted;
+        width: 100%;
+        text-align: right;
+        padding-bottom: 8px;
+    }
+}
+@media(max-width:591px){
+    .stats{
+        flex-direction: column;
+    }
+}
+@media(max-width:425px) {
+    .logo {
+        /* width: 55%; */
+        width: 170px;
+        margin: auto;
+    }
+    .banner-main h4 {
+        font-size: 18px;
+    }
+    .banner-main h2 {
+        font-size: 32px;
+    }
+    section .banner-main {
+        bottom: 13px;
+        left: 30px;
+        max-width: 560px;
+    }
+    .btn-banner {
+        padding: 10px 15px;
+    }
+    footer ul li:first-child{
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    footer ul li {
+        margin-right: 25px;
+    }
+    .mobile-main-menu ul li {
+        font-size: 16px;
+    }
+    .mobile-main-menu {
+              width: 260px;
+    }
+    .section-text {
+        top: 68%;
+    }
+    .section-text h3 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+}
+@media(max-width:360px){
+    .banner{
+        object-fit: cover;
+    }
+    .banner-2{
+        object-fit: cover;
+    }
+    .banner-3{
+        object-fit: cover;
+    }
+    .banner-4{
+        object-fit: cover;
+    }
+    .banner-5{
+        object-fit: cover;
+    }
+    .banner-6{
+        object-fit: cover;
+    }
+}
